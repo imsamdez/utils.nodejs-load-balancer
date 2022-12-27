@@ -8,7 +8,7 @@ const ports = [4100, 4101, 4102, 4103, 4104];
 let i = 0;
 
 var server = bouncy(function (req, res, bounce) {
-  const port = ports[between(0, 4)];
+  const port = ports[between(0, ports.length)];
 
   console.log("request " + i + " sending to -> ", port);
   i++;
